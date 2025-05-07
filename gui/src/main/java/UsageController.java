@@ -34,13 +34,11 @@ public class UsageController {
     @FXML
     public void fetchRefresh(javafx.event.ActionEvent actionEvent) {
         try {
-            // API-URL
             URL url = new URL("http://localhost:8080/energy/current");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
             connection.setRequestProperty("Accept", "application/json");
 
-            // Anfrage erfolgreich?
             if (connection.getResponseCode() == 200) {
                 BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
                 StringBuilder response = new StringBuilder();
@@ -51,20 +49,17 @@ public class UsageController {
                 }
                 reader.close();
 
-                // Array in JSON-Format
                 String jsonResponse = response.toString();
-                org.json.JSONArray jsonArray = new org.json.JSONArray(jsonResponse);
-                if (jsonArray.length() > 0) {
-                    org.json.JSONObject object = jsonArray.getJSONObject(0);
+                org.json.JSONObject object = new org.json.JSONObject(jsonResponse);
 
-                    // JSON-Werte extrahieren
-                    double community_pool = object.getDouble("community_pool");
-                    double grid_portion = object.getDouble("grid_portion");
+                // JSON-Werte extrahieren
+                double community_pool = object.getDouble("community_pool");
+                double grid_portion = object.getDouble("grid_portion");
 
-                    // Labels refreshen
-                    community_pool_label.setText(String.valueOf(community_pool));
-                    grid_portion_label.setText(String.valueOf(grid_portion));
-                }
+                // Labels refreshen
+                community_pool_label.setText(String.valueOf(community_pool));
+                grid_portion_label.setText(String.valueOf(grid_portion));
+
             } else {
                 System.out.println("Error: " + connection.getResponseCode());
             }
@@ -78,7 +73,6 @@ public class UsageController {
     @FXML
     private void fetchShow(javafx.event.ActionEvent actionEvent) {
         try {
-            // Start- und Enddatum auslesen
             LocalDate startDate = start.getValue();
             LocalDate endDate = end.getValue();
 
@@ -95,40 +89,36 @@ public class UsageController {
             String startFormatted = startDate.atStartOfDay().toString(); // z.B. "2025-05-07T00:00:00"
             String endFormatted = endDate.atStartOfDay().toString();
 
-            // Iteration über die Stunden zwischen den beiden Zeitpunkten
-            /**for (LocalDate date = startDate; !date.isAfter(endDate); date = date.plusDays(1)) {
-                for (int hour = 0; hour < 24; hour++) {
 
-                    **/
-                    String urlString = String.format("http://localhost:8080/energy/historical?start=%s&end=%s", startFormatted, endFormatted);
-                    URL url = new URL(urlString);
-                    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                    connection.setRequestMethod("GET");
-                    connection.setRequestProperty("Accept", "application/json");
+            String urlString = String.format("http://localhost:8080/energy/historical?start=%s&end=%s", startFormatted, endFormatted);
+            URL url = new URL(urlString);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
+            connection.setRequestProperty("Accept", "application/json");
 
-                    if (connection.getResponseCode() == 200) {
-                        BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-                        StringBuilder response = new StringBuilder();
-                        String line;
+            if (connection.getResponseCode() == 200) {
+                BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                StringBuilder response = new StringBuilder();
+                String line;
 
-                        while ((line = reader.readLine()) != null) {
-                            response.append(line);
-                        }
-                        reader.close();
+                while ((line = reader.readLine()) != null) {
+                    response.append(line);
+                }
+                reader.close();
 
-                        // JSON-Array verarbeiten
-                        String jsonResponse = response.toString();
-                        org.json.JSONArray jsonArray = new org.json.JSONArray(jsonResponse);
-                        for (int i = 0; i < jsonArray.length(); i++) {
-                            org.json.JSONObject jsonObject = jsonArray.getJSONObject(i);
-                            community_produced += jsonObject.getDouble("community_produced");
-                            community_used += jsonObject.getDouble("community_used");
-                            grid_used += jsonObject.getDouble("grid_used");
-                        }
-                    }
-                    connection.disconnect();
-               /** }
-            }**/
+                String jsonResponse = response.toString();
+
+                org.json.JSONObject jsonObject = new org.json.JSONObject(jsonResponse);
+                org.json.JSONArray keys = jsonObject.names();
+                for (int i = 0; i < keys.length(); i++) {
+                    String key = keys.getString(i);
+                    org.json.JSONObject inner = jsonObject.getJSONObject(key);
+                    community_produced += inner.getDouble("community_produced");
+                    community_used += inner.getDouble("community_used");
+                    grid_used += inner.getDouble("grid_used");
+                }
+            }
+            connection.disconnect();
 
             // Labels aktualisieren
             community_produced_label.setText(String.format(Locale.US, "%.2f", community_produced));

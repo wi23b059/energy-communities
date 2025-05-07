@@ -28,7 +28,7 @@
         <Label fx:id="community_pool_label" text="0">
           <font><Font size="14" /></font>
         </Label>
-        <Label text="%" />
+        <Label text="\%" />
       </HBox>
 
       <HBox spacing="10">
@@ -38,7 +38,7 @@
         <Label fx:id="grid_portion_label" text="0">
           <font><Font size="14" /></font>
         </Label>
-        <Label text="%" />
+        <Label text="\%" />
       </HBox>
 
       <Separator />

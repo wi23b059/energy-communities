@@ -5,33 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6ddee5e-f4e0-4540-a2b4-0f0779de3c85" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../gui/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gui/src/main/java/UsageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gui/src/main/java/UserInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/energycommunities/energyservice/model/EnergyData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/HELP.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/src/main/java/com/energycommunities/weatherservice/WeatherServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/src/main/java/com/energycommunities/weatherservice/controller/WeatherController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/src/main/java/com/energycommunities/weatherservice/model/WeatherData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/src/main/java/com/energycommunities/weatherservice/repository/WeatherRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/src/test/java/com/energycommunities/weatherservice/WeatherServiceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/target/classes/com/energycommunities/weatherservice/WeatherServiceApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/target/classes/com/energycommunities/weatherservice/controller/WeatherController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/target/classes/com/energycommunities/weatherservice/model/WeatherData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/target/classes/com/energycommunities/weatherservice/repository/WeatherRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather-service/target/test-classes/com/energycommunities/weatherservice/WeatherApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gui/src/main/java/UsageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gui/src/main/java/UsageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gui/src/main/resources/usage_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../gui/src/main/resources/usage_window.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,31 +42,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.EnergyServiceApplication.executor": "Run",
-    "Spring Boot.WeatherServiceApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/jvanb/Desktop/energyCommunities/gui",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.51609194",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.EnergyServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.WeatherServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jvanb/Desktop/energyCommunities/gui&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.51609194&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Spring Boot.EnergyServiceApplication">
     <configuration name="EnergyServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -142,6 +118,9 @@
       <workItem from="1746611869913" duration="410000" />
       <workItem from="1746612296133" duration="248000" />
       <workItem from="1746621351294" duration="7098000" />
+      <workItem from="1746639583793" duration="606000" />
+      <workItem from="1746641155669" duration="2638000" />
+      <workItem from="1746645856703" duration="619000" />
     </task>
     <servers />
   </component>
