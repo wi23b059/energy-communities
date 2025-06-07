@@ -56,7 +56,14 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
+      <version>3.1.1</version>
     </dependency>
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>20240303</version>
+    </dependency>
+
   </dependencies>
 
   <build>
@@ -80,7 +87,7 @@
             <id>default-cli</id>
             <configuration>
               <mainClass>
-                at.fhtechnikum.disys_javafx/at.fhtechnikum.disys_javafx.HelloApplication
+                at.fhtechnikum.disys_javafx/at.fhtechnikum.disys_javafx.Main
               </mainClass>
               <launcher>app</launcher>
               <jlinkZipName>app</jlinkZipName>

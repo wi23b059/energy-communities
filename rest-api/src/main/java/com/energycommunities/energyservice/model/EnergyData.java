@@ -6,8 +6,8 @@ import java.time.LocalDateTime;
 
 @Data
 public class EnergyData {
-    @JsonProperty("community_pool")
-    private double communityPool;
+    @JsonProperty("community_depleted")
+    private double communityDepleted;
 
     @JsonProperty("grid_portion")
     private double gridPortion;

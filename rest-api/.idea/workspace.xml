@@ -5,9 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6ddee5e-f4e0-4540-a2b4-0f0779de3c85" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../community-producer/src/main/java/com/energycommunities/communityproducer/config/RabbitMQConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../community-producer/src/main/java/com/energycommunities/communityproducer/model/EnergyMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../community-producer/src/main/java/com/energycommunities/communityproducer/producer/EnergyProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/energycommunities/energyservice/model/PercentageData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/energycommunities/energyservice/model/UsageData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/energycommunities/energyservice/repository/PercentageDataRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/energycommunities/energyservice/repository/UsageDataRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../usage-service/src/main/java/com/energycommunities/usageservice/config/RabbitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../usage-service/src/main/java/com/energycommunities/usageservice/messaging/EnergyMessageListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../usage-service/src/main/java/com/energycommunities/usageservice/model/EnergyMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../usage-service/src/main/java/com/energycommunities/usageservice/model/PercentageMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../usage-service/src/main/java/com/energycommunities/usageservice/model/UsageData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../usage-service/src/main/java/com/energycommunities/usageservice/repository/UsageDataRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../usage-service/src/main/java/com/energycommunities/usageservice/service/UsageAggregator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gui/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gui/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gui/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gui/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gui/src/main/java/UsageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gui/src/main/java/UsageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gui/src/main/resources/usage_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../gui/src/main/resources/usage_window.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/energycommunities/energyservice/EnergyServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/energycommunities/energyservice/EnergyServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/energycommunities/energyservice/controller/EnergyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/energycommunities/energyservice/controller/EnergyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/energycommunities/energyservice/model/EnergyData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/energycommunities/energyservice/model/EnergyData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/energycommunities/energyservice/model/WeatherData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/energycommunities/energyservice/EnergyApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/energycommunities/energyservice/EnergyApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/energycommunities/energyservice/controller/EnergyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/energycommunities/energyservice/controller/EnergyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/energycommunities/energyservice/model/EnergyData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/energycommunities/energyservice/model/EnergyData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/energycommunities/energyservice/model/WeatherData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/energycommunities/energyservice/EnergyApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/energycommunities/energyservice/EnergyApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +91,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.51609194&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.platform.ide.impl.presentationAssistant.PresentationAssistantConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -121,6 +149,17 @@
       <workItem from="1746639583793" duration="606000" />
       <workItem from="1746641155669" duration="2638000" />
       <workItem from="1746645856703" duration="619000" />
+      <workItem from="1746721125748" duration="615000" />
+      <workItem from="1747155472601" duration="621000" />
+      <workItem from="1747331055093" duration="1971000" />
+      <workItem from="1747336591832" duration="10000" />
+      <workItem from="1748959001795" duration="2373000" />
+      <workItem from="1749041514717" duration="7579000" />
+      <workItem from="1749243767727" duration="3208000" />
+      <workItem from="1749284786577" duration="8132000" />
+      <workItem from="1749299545616" duration="3320000" />
+      <workItem from="1749303521631" duration="4400000" />
+      <workItem from="1749310633550" duration="1458000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,8 @@
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -34,7 +36,7 @@ public class UsageController {
     @FXML
     public void fetchRefresh(javafx.event.ActionEvent actionEvent) {
         try {
-            URL url = new URL("http://localhost:8080/energy/current");
+            URL url = new URL("http://localhost:8084/energy/current");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
             connection.setRequestProperty("Accept", "application/json");
@@ -53,7 +55,7 @@ public class UsageController {
                 org.json.JSONObject object = new org.json.JSONObject(jsonResponse);
 
                 // JSON-Werte extrahieren
-                double community_pool = object.getDouble("community_pool");
+                double community_pool = object.getDouble("community_depleted");
                 double grid_portion = object.getDouble("grid_portion");
 
                 // Labels refreshen
@@ -90,7 +92,7 @@ public class UsageController {
             String endFormatted = endDate.atStartOfDay().toString();
 
 
-            String urlString = String.format("http://localhost:8080/energy/historical?start=%s&end=%s", startFormatted, endFormatted);
+            String urlString = String.format("http://localhost:8084/energy/historical?start=%s&end=%s", startFormatted, endFormatted);
             URL url = new URL(urlString);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
@@ -107,12 +109,11 @@ public class UsageController {
                 reader.close();
 
                 String jsonResponse = response.toString();
+                // Hier JSONArray verwenden, da Antwort ein Array ist
+                JSONArray jsonArray = new JSONArray(jsonResponse);
 
-                org.json.JSONObject jsonObject = new org.json.JSONObject(jsonResponse);
-                org.json.JSONArray keys = jsonObject.names();
-                for (int i = 0; i < keys.length(); i++) {
-                    String key = keys.getString(i);
-                    org.json.JSONObject inner = jsonObject.getJSONObject(key);
+                for (int i = 0; i < jsonArray.length(); i++) {
+                    JSONObject inner = jsonArray.getJSONObject(i);
                     community_produced += inner.getDouble("community_produced");
                     community_used += inner.getDouble("community_used");
                     grid_used += inner.getDouble("grid_used");

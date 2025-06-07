@@ -34,7 +34,7 @@ class EnergyApplicationTests {
     void givenEnergyData_whenGetCurrentEnergy_thenStatus200() throws Exception {
         // Arrange
         EnergyData data = new EnergyData();
-        data.setCommunityPool(100.0);
+        data.setCommunityDepleted(100.0);
         data.setGridPortion(5.63);
         data.setCommunityProduced(18.05);
         data.setCommunityUsed(18.05);

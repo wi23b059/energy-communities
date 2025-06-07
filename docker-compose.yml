@@ -1,58 +1,58 @@
-version: '3.8'
-
 services:
-  rabbitmq:
-    image: rabbitmq:3-management
+  database:
+    image: postgres:alpine
     ports:
-      - "5672:5672"
-      - "15672:15672" # Web UI
-
-  postgres:
-    image: postgres:15
+      - '5432:5432'
     environment:
-      POSTGRES_DB: energy
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-    ports:
-      - "5432:5432"
+      - POSTGRES_USER=disysuser
+      - POSTGRES_PASSWORD=disyspw
+      - POSTGRES_DB=disysdb
     volumes:
-      - postgres_data:/var/lib/postgresql/data
-
-  producer:
-    build: ./producer
-    depends_on:
-      - rabbitmq
-
-  user:
-    build: ./user
-    depends_on:
-      - rabbitmq
-
-  usage-service:
-    build: ./usage-service
-    depends_on:
-      - rabbitmq
-      - postgres
-
-  percentage-service:
-    build: ./percentage-service
-    depends_on:
-      - postgres
-      - rabbitmq
-
-  rest-api:
-    build: ./rest-api
-    depends_on:
-      - postgres
+      - ./db-init:/docker-entrypoint-initdb.d
+      - pgdata:/var/lib/postgresql/data  # <- Persistenter Speicher
+  
+  rabbitmq:
+    image: rabbitmq:management-alpine
     ports:
-      - "8080:8080"
+      - '5672:5672'
+      - '15672:15672'
+      
+#  community-producer:
+#    build: ./community-producer
+#    depends_on:
+#      - database
+#      - rabbitmq
 
-  gui:
-    build: ./gui
-    depends_on:
-      - rest-api
-    ports:
-      - "8090:8090"
+#  community-user:
+#    build: ./community-user
+#    depends_on:
+#      - database
+#      - rabbitmq
+
+#  usage-service:
+#    build: ./usage-service
+#    depends_on:
+#      - community-user
+#      - community-producer
+
+#  current-percentage-service:
+#    build: ./current-percentage-service
+#    depends_on:
+#      - usage-service
+
+#  rest-api:
+#    build: ./rest-api
+#    ports:
+#      - '8080:8080'
+#    depends_on:
+#      - current-percentage-service
+
+#  gui:
+#    build: ./gui
+#    ports:
+#      - '3000:3000'
+#    depends_on:
+#      - rest-api
 
 volumes:
-  postgres_data:
+    pgdata:
