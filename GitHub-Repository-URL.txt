@@ -1,2 +1,28 @@
 GitHub-Repository-URL:
 https://github.com/wi23b059/energy-communities
+
+- Start Docker Desktop
+
+- Pull giut repository from remote git hub repository using Git Bash with:
+  git clone https://github.com/wi23b059/energy-communities.git
+
+- Use Docker Compose to build and run all components using Git Bash with:
+  docker compose up --build (or if built already only: docker compose up)
+
+- Open all project folders in IntelliJ
+  - community-producer
+  - community-user
+  - usage-service
+  - rest-api
+  - current-percentage-service
+  - gui
+
+- Then run every application in the same order (if message "Enable Annotation for Lombok" appears click on "Enable" and start service anew):
+  - CommunityProducerApplication.java
+  - CommunityUserApplication.java
+  - UsageServiceApplication.java
+  - EnergyServiceApplication.java
+  - CurrentPercentageServiceApplication.java
+  - Main.java
+
+Optional: connect to database to see tables.

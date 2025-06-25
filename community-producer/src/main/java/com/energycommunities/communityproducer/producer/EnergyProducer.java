@@ -40,7 +40,7 @@ public class EnergyProducer {
                     sendEnergyData(); // Energie-Daten erzeugen und senden
 
                     // Zufälliges Warten zwischen 1 und 5 Sekunden
-                    int delay = 1000 + random.nextInt(4000); // 1000 bis 5000 ms
+                    int delay = 1000 + random.nextInt(4001); // 1000 bis 5000 ms
                     Thread.sleep(delay);
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
@@ -49,7 +49,7 @@ public class EnergyProducer {
             }
         });
 
-        thread.setDaemon(true);
+        thread.setDaemon(true); // Wird automatisch beendet, wenn alle normalen (nicht-Daemon-)Threads beendet sind
         thread.start(); // Starte den Hintergrund-Thread beim Start der Anwendung
     }
 

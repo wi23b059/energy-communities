@@ -13,10 +13,10 @@ import java.util.Locale;
 
 public class UsageController {
     @FXML
-    private Label community_pool_label;
+    Label community_pool_label;
 
     @FXML
-    private Label grid_portion_label;
+    Label grid_portion_label;
 
     @FXML
     private Label community_produced_label;
@@ -129,5 +129,13 @@ public class UsageController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void updateLabelsFromJson(String jsonResponse) {
+        JSONObject object = new JSONObject(jsonResponse);
+        double community_pool = object.getDouble("community_depleted");
+        double grid_portion = object.getDouble("grid_portion");
+        community_pool_label.setText(String.valueOf(community_pool));
+        grid_portion_label.setText(String.valueOf(grid_portion));
     }
 }

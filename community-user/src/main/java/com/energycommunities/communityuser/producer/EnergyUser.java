@@ -33,7 +33,7 @@ public class EnergyUser {
                     sendEnergyUsage(); // Energie-Verbrauch senden
 
                     // Zufälliges Warten zwischen 1 und 5 Sekunden
-                    int delay = 1000 + random.nextInt(4000); // 1000 bis 5000 ms
+                    int delay = 1000 + random.nextInt(4001); // 1000 bis 5000 ms
                     Thread.sleep(delay);
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
