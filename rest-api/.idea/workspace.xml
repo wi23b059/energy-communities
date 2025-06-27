@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6ddee5e-f4e0-4540-a2b4-0f0779de3c85" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../gui/src/test/java/UsageControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/energycommunities/energyservice/EnergyControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GitHub-Repository-URL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../GitHub-Repository-URL.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Intermediate HandIn - Beispiel-Screenshot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Intermediate HandIn - HowToTest - API and GUI.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../community-producer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../community-producer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../community-producer/src/main/java/com/energycommunities/communityproducer/producer/EnergyProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../community-producer/src/main/java/com/energycommunities/communityproducer/producer/EnergyProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../community-user/src/main/java/com/energycommunities/communityuser/producer/EnergyUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../community-user/src/main/java/com/energycommunities/communityuser/producer/EnergyUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gui/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gui/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gui/src/main/java/UsageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gui/src/main/java/UsageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/energycommunities/energyservice/repository/EnergyRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/energycommunities/energyservice/EnergyApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/energycommunities/energyservice/repository/EnergyRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/energycommunities/energyservice/EnergyApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,33 +45,67 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.EnergyControllerTest.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.EnergyServiceApplication.executor": "Run",
-    "Spring Boot.WeatherServiceApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/jvanb/Desktop/energyCommunities/current-percentage-service",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.51609194",
-    "settings.editor.selected.configurable": "com.intellij.platform.ide.impl.presentationAssistant.PresentationAssistantConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.EnergyApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnergyApplicationTests.givenEnergyData_whenGetCurrentEnergy_thenStatus200.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnergyControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.EnergyServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.WeatherServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jvanb/Desktop/energyCommunities/gui&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.51609194&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.platform.ide.impl.presentationAssistant.PresentationAssistantConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Spring Boot.EnergyServiceApplication">
+    <configuration name="EnergyApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rest-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.energycommunities.energyservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.energycommunities.energyservice" />
+      <option name="MAIN_CLASS_NAME" value="com.energycommunities.energyservice.EnergyApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EnergyApplicationTests.givenEnergyData_whenGetCurrentEnergy_thenStatus200" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rest-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.energycommunities.energyservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.energycommunities.energyservice" />
+      <option name="MAIN_CLASS_NAME" value="com.energycommunities.energyservice.EnergyApplicationTests" />
+      <option name="METHOD_NAME" value="givenEnergyData_whenGetCurrentEnergy_thenStatus200" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EnergyControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rest-api" />
       <extension name="coverage">
@@ -118,6 +147,8 @@
       <list>
         <item itemvalue="Spring Boot.EnergyServiceApplication" />
         <item itemvalue="JUnit.EnergyControllerTest" />
+        <item itemvalue="JUnit.EnergyApplicationTests.givenEnergyData_whenGetCurrentEnergy_thenStatus200" />
+        <item itemvalue="JUnit.EnergyApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
   </component>
@@ -162,11 +193,25 @@
       <workItem from="1750532165328" duration="682000" />
       <workItem from="1750533967965" duration="1311000" />
       <workItem from="1750851003149" duration="223000" />
+      <workItem from="1750881141080" duration="1526000" />
+      <workItem from="1750926124366" duration="4057000" />
+      <workItem from="1750954447144" duration="1116000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>

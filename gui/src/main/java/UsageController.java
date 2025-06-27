@@ -125,6 +125,7 @@ public class UsageController {
             community_produced_label.setText(String.format(Locale.US, "%.2f", community_produced));
             community_used_label.setText(String.format(Locale.US, "%.2f", community_used));
             grid_used_label.setText(String.format(Locale.US, "%.2f", grid_used));
+            grid_used_label.setText(String.valueOf(grid_used));
 
         } catch (Exception e) {
             e.printStackTrace();
